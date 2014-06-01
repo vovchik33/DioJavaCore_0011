@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--suppress SpringModelInspection -->
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="person" class="edu.dio.lesson9.Person">
+
+        <constructor-arg index="0" type="java.lang.String" value="Unknown"/>
+        <constructor-arg index="1" type="java.lang.String" value="Unknown"/>
+        <constructor-arg index="2" type="int" value="30"/>
+        <constructor-arg index="3">
+            <list>
+                <value>unknown@gmail.com</value>
+                <value>unknown@mail.ru</value>
+            </list>
+        </constructor-arg>
+
+        <property name="car" ref="car"/>
+    </bean>
+    <bean id="person2" class="edu.dio.lesson9.Person">
+
+        <constructor-arg index="0" type="java.lang.String" value="X"/>
+        <constructor-arg index="1" type="java.lang.String" value="Man"/>
+        <constructor-arg index="2" type="int" value="20"/>
+        <constructor-arg index="3">
+            <list>
+                <value>xman@gmail.com</value>
+                <value>xman@mail.ru</value>
+            </list>
+        </constructor-arg>
+
+        <property name="car" ref="supercar"/>
+    </bean>
+</beans>
